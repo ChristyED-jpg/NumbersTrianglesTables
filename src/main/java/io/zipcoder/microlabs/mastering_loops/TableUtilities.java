@@ -2,32 +2,51 @@ package io.zipcoder.microlabs.mastering_loops;
 import java.util.Scanner;
 public class TableUtilities {
     public static String getSmallMultiplicationTable(int num) {
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i <= num; i++) {
-            for (int l = 1; l <= num; l++) {
-                sb.append("");
-            }
-        }
-        int i;
-        for (i = 0; i <= 0; i++) ;
-        {
-            if (i < num) {
 
-            }
+        return getMultiplicationTable(5);
 
-        }
 
-      retun sb. Switch();
     }
-
-}
 
 
     public static String getLargeMultiplicationTable() {
-        return null;
+
+        return getMultiplicationTable(10);
     }
 
+
+
+
+
     public static String getMultiplicationTable(int tableSize) {
-        return null;
+        StringBuilder sb = new StringBuilder();
+        for (int i = 1; i <= tableSize; i++) {
+            for (int j = 1; j <= tableSize; j++) {
+                if ((i * j) <= 9) {
+                    sb.append("  " + (i * j) + " |");
+                } else if ((i * j) > 9 && (i * j) < 100) {
+                    sb.append(" " + (i * j) + " |");
+                } else {
+                    sb.append((i * j) + " |");
+
+                }
+            }
+            sb.append("\n");
+
+        }
+        return sb.toString();
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
